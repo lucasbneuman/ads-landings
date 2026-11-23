@@ -47,3 +47,16 @@ quiere exponer el preview). Los canonicals y `og:url` apuntan a
 - Sistema compartido: `ADS-41`. Taller: `ADS-42`. Consultoría: `ADS-43`. Media: `ADS-44`.
 - Deploy y medición: `ADS-45` (bloqueado por subdominio y host).
 - Validación de paleta y tipografía: `ADS-46` (bloqueante de publicación).
+
+## Analítica
+
+Umami autoalojado (Coolify, proyecto Infrastructure):
+
+- Panel: `https://umami-fniarqyql1cxwrjtfcpskn46.76.13.170.240.sslip.io`
+- Sitio creado: `promo.lucasbenites.com` (id `7f5fa208-0727-4953-bccd-c9f593f752ff`)
+- El tracker se carga en las tres páginas con `data-website-id`; `shared/landing.js`
+  reenvía a Umami los eventos propios (`cta_click`, `lead_submit`, `faq_open`) además de
+  dejarlos en `window.dataLayer`.
+
+Cuando exista el DNS `analytics.lucasbenites.com`, se cambia la URL del tracker en las tres
+páginas y el dominio en la aplicación de Coolify.
