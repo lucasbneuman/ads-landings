@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Tokens de marca — BORRADOR PROVISIONAL
+   La paleta final está pendiente de validación visual (LBO-A-13, "Dirección de
+   color"). Estos valores siguen la dirección documentada (base oscura, un acento
+   frío para tecnología/IA, un acento cálido para acción y cercanía) pero NO son
+   tokens aprobados. Cambiar acá y se propagan a las tres landings.
+   ========================================================================== */
+
+:root {
+  /* Superficies */
+  --bg: #07080a;
+  --bg-elev: #0b0d11;
+  --surface: #11141a;
+  --surface-2: #161a22;
+  --line: #232833;
+  --line-soft: #171b22;
+
+  /* Texto */
+  --ink: #f3f5f8;
+  --muted: #a6adbc;
+  --dim: #8b93a3;
+
+  /* Acentos */
+  --cold: #6fe3c0;          /* tecnología, IA, sistema */
+  --cold-soft: #21453d;
+  --warm: #f2b25c;          /* acción, cercanía, CTA */
+  --warm-hover: #ffc678;
+  --warm-ink: #1a1206;
+  --danger: #ff8a7a;
+
+  /* Tipografía */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+  --fs-eyebrow: 0.72rem;
+  --fs-body: 1.0625rem;
+  --fs-lead: clamp(1.08rem, 0.6vw + 0.95rem, 1.28rem);
+  --fs-h3: clamp(1.15rem, 0.7vw + 1rem, 1.4rem);
+  --fs-h2: clamp(1.6rem, 2.2vw + 1rem, 2.5rem);
+  --fs-h1: clamp(2.1rem, 4.2vw + 1rem, 4rem);
+
+  /* Espaciado y forma */
+  --maxw: 1120px;
+  --gutter: clamp(20px, 5vw, 40px);
+  --section-y: clamp(56px, 8vw, 104px);
+  --radius: 14px;
+  --radius-sm: 10px;
+  --radius-lg: 22px;
+
+  /* Sombras y foco */
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.42);
+  --focus: 0 0 0 3px rgba(111, 227, 192, 0.45);
+}

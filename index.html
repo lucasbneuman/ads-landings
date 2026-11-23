@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ofertas · preview interno</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="shared/tokens.css">
+<link rel="stylesheet" href="shared/base.css">
+<link rel="stylesheet" href="shared/landing.css">
+<style>
+  .hub { padding: clamp(40px, 7vw, 80px) 0; }
+  .hub h1 { font-size: var(--fs-h2); max-width: 24ch; }
+  .hub .cards { margin-top: 32px; display: grid; gap: 16px; grid-template-columns: 1fr; }
+  @media (min-width: 820px) { .hub .cards { grid-template-columns: repeat(3, 1fr); } }
+  .hub a.card { display: block; text-decoration: none; color: inherit; transition: border-color .15s ease, transform .15s ease; }
+  .hub a.card:hover { border-color: var(--cold); transform: translateY(-2px); }
+  .hub .card span.tag { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--cold); }
+</style>
+</head>
+<body>
+<main class="hub">
+  <div class="wrap">
+    <span class="eyebrow">Preview interno · no indexar</span>
+    <h1>Tres landings, un producto por página.</h1>
+    <p class="lead mt-24">Cada página responde solo por su producto y tiene un único objetivo de conversión.</p>
+
+    <div class="cards">
+      <a class="card" href="taller/">
+        <span class="tag">Taller</span>
+        <h3>Implementá IA</h3>
+        <p>Lista de espera de la próxima cohorte.</p>
+      </a>
+      <a class="card" href="consultoria/">
+        <span class="tag">Consultoría</span>
+        <h3>1:1</h3>
+        <p>Primera conversación para entender el caso.</p>
+      </a>
+      <a class="card" href="media/">
+        <span class="tag">Desarrollo</span>
+        <h3>A medida</h3>
+        <p>Primer contacto con el proceso a resolver.</p>
+      </a>
+    </div>
+  </div>
+</main>
+</body>
+</html>
