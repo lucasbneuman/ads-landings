@@ -14,7 +14,7 @@ shared/landing.css    hero asimétrico, panel, pasos, FAQ, formulario, sticky CT
 shared/landing.js     eventos (window.dataLayer), sticky CTA, validación del form
 taller/               Implementá IA — lista de espera
 consultoria/          Consultoría 1:1 — primera conversación
-media/                Desarrollo a medida — primer contacto
+desarrollo/           Desarrollo a medida — primer contacto
 assets/favicon.svg
 ```
 
@@ -25,7 +25,7 @@ en la UI: una landing responde solo por su producto.
 
 ```bash
 python3 -m http.server 8088 --bind 127.0.0.1
-# http://127.0.0.1:8088/  (hub) · /taller/ · /consultoria/ · /media/
+# http://127.0.0.1:8088/  (hub) · /taller/ · /consultoria/ · /desarrollo/
 ```
 
 ## Formularios
@@ -38,7 +38,7 @@ fallback con mailto en vez de simular éxito.
 
 Sitio estático: se publica el árbol tal cual (sin `index.html` del hub si no se
 quiere exponer el preview). Los canonicals y `og:url` apuntan a
-`https://ofertas.lucasbenites.com/<producto>/`.
+`https://promo.lucasbenites.com/<producto>/`.
 
 ## Estado
 
