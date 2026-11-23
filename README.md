@@ -52,7 +52,7 @@ quiere exponer el preview). Los canonicals y `og:url` apuntan a
 
 Umami autoalojado (Coolify, proyecto Infrastructure):
 
-- Panel: `https://umami-fniarqyql1cxwrjtfcpskn46.76.13.170.240.sslip.io`
+- Panel: `https://analytics.lucasbenites.com`
 - Sitio creado: `promo.lucasbenites.com` (id `7f5fa208-0727-4953-bccd-c9f593f752ff`)
 - El tracker se carga en las tres páginas con `data-website-id`; `shared/landing.js`
   reenvía a Umami los eventos propios (`cta_click`, `lead_submit`, `faq_open`) además de
