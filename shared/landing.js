@@ -6,7 +6,12 @@
   // leyendo window.dataLayer; acá no se carga ningún script externo.
   window.dataLayer = window.dataLayer || [];
   function track(event, detail) {
-    window.dataLayer.push(Object.assign({ event: event, product: document.body.dataset.product || "" }, detail || {}));
+    var payload = Object.assign({ event: event, product: document.body.dataset.product || "" }, detail || {});
+    window.dataLayer.push(payload);
+    // Umami escucha los mismos eventos: si el tracker está cargado, se reenvían.
+    if (window.umami && typeof window.umami.track === "function") {
+      try { window.umami.track(event, payload); } catch (e) { /* nunca romper por analítica */ }
+    }
   }
 
   // --- Sticky CTA (solo mobile, aparece pasada la primera pantalla) ----------
