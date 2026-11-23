@@ -8,7 +8,7 @@ externas (no hay fuentes remotas ni scripts de terceros).
 
 ```
 index.html            hub de preview (noindex, no se publica)
-shared/tokens.css     variables de marca — BORRADOR hasta validar LBO-A-13
+shared/tokens.css     paleta y tipografías de lucasbenites.com (Kadence)
 shared/base.css       reset, tipografía, botones, foco
 shared/landing.css    hero asimétrico, panel, pasos, FAQ, formulario, sticky CTA
 shared/landing.js     eventos (window.dataLayer), sticky CTA, validación del form
@@ -16,6 +16,7 @@ taller/               Implementá IA — lista de espera
 consultoria/          Consultoría 1:1 — primera conversación
 desarrollo/           Desarrollo a medida — primer contacto
 assets/favicon.svg
+assets/fonts/         Montserrat y Source Sans 3 autoalojadas (subset latin)
 ```
 
 El producto de cada página se fija en `<body data-product="…">` y no hay selector
