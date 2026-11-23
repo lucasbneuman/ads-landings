@@ -33,8 +33,9 @@ a:hover { color: var(--ink); }
 }
 
 h1, h2, h3 {
+  font-family: var(--font-display);
   line-height: 1.08;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
   text-wrap: balance;
   font-weight: 700;
 }
@@ -101,14 +102,14 @@ p { text-wrap: pretty; }
 .btn-ghost {
   --btn-bg: transparent;
   --btn-ink: var(--ink);
-  border-color: #3a4454;
+  border-color: var(--line);
   box-shadow: none;
 }
-.btn-ghost:hover { background: var(--surface-2); color: var(--ink); border-color: #3c4757; }
+.btn-ghost:hover { background: var(--surface-2); color: var(--ink); border-color: var(--cold-soft); }
 
 .btn-note {
   font-size: 0.94rem;
-  color: #c3cad8;
+  color: var(--muted);
   display: flex;
   align-items: center;
   gap: 8px;

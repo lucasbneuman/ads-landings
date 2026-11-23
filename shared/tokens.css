@@ -1,35 +1,64 @@
 /* ==========================================================================
-   Tokens de marca — BORRADOR PROVISIONAL
-   La paleta final está pendiente de validación visual (LBO-A-13, "Dirección de
-   color"). Estos valores siguen la dirección documentada (base oscura, un acento
-   frío para tecnología/IA, un acento cálido para acción y cercanía) pero NO son
-   tokens aprobados. Cambiar acá y se propagan a las tres landings.
+   Tokens de marca — tomados de lucasbenites.com (tema Kadence, paleta global)
+   Fuente: variables --global-palette1..15 y tipografías del tema.
+     palette1  #1e3e62   palette2  #f35e3e   palette4  #0b192c
+     palette5  #4A5568   palette6  #718096   palette8  #F7FAFC
+   Tipografías del sitio: Montserrat (títulos) y Source Sans Pro (texto).
+   Los tonos derivados (cold/ink sobre fondo oscuro) se ajustaron para pasar AA
+   sobre #0b192c: coral 5.45:1, azul claro 7.06:1, texto 16.84:1.
    ========================================================================== */
 
-:root {
-  /* Superficies */
-  --bg: #07080a;
-  --bg-elev: #0b0d11;
-  --surface: #11141a;
-  --surface-2: #161a22;
-  --line: #232833;
-  --line-soft: #171b22;
+/* --- Tipografías autoalojadas (subset latin, incluye acentos del español) --- */
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/montserrat-600-latin.woff2") format("woff2");
+  font-weight: 600; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/montserrat-700-latin.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../assets/fonts/source-sans-3-400-latin.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../assets/fonts/source-sans-3-600-latin.woff2") format("woff2");
+  font-weight: 600; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
-  /* Texto */
-  --ink: #f3f5f8;
-  --muted: #a6adbc;
-  --dim: #8b93a3;
+:root {
+  /* Superficies (derivadas de palette4 y palette1) */
+  --bg: #0b192c;
+  --bg-elev: #0e2138;
+  --surface: #122a44;
+  --surface-2: #16324f;
+  --line: #24425f;
+  --line-soft: #1a3350;
+
+  /* Texto (palette8 y derivados con contraste AA medido) */
+  --ink: #f7fafc;
+  --muted: #c3d0dd;
+  --dim: #96a9be;
 
   /* Acentos */
-  --cold: #6fe3c0;          /* tecnología, IA, sistema */
-  --cold-soft: #21453d;
-  --warm: #f2b25c;          /* acción, cercanía, CTA */
-  --warm-hover: #ffc678;
-  --warm-ink: #1a1206;
+  --cold: #6aa8ea;          /* tecnología/IA: tinte claro de palette12 #1159af */
+  --cold-soft: #1c3f66;
+  --warm: #f35e3e;          /* acción/CTA: palette2 del sitio */
+  --warm-hover: #ff7455;
+  --warm-ink: #12181f;
   --danger: #ff8a7a;
 
   /* Tipografía */
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Source Sans 3", "Source Sans Pro", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
   --fs-eyebrow: 0.72rem;
@@ -48,6 +77,6 @@
   --radius-lg: 22px;
 
   /* Sombras y foco */
-  --shadow: 0 18px 50px rgba(0, 0, 0, 0.42);
-  --focus: 0 0 0 3px rgba(111, 227, 192, 0.45);
+  --shadow: 0 18px 50px rgba(2, 8, 20, 0.55);
+  --focus: 0 0 0 3px rgba(106, 168, 234, 0.55);
 }
